@@ -67,11 +67,8 @@ PRZYKŁADY DOPASOWANIA:
 - "Nie wiem jak zacząć z AI" → R1-R6 (fundamenty + framework PFCEI)`;
 
 export default async function handler(req, res) {
-  // CORS - only allow production domain
-  const origin = req.headers.origin;
-  if (origin === 'https://instytut.ai') {
-    res.setHeader('Access-Control-Allow-Origin', origin);
-  }
+  // CORS
+  res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
